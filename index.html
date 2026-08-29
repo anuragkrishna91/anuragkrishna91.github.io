@@ -167,7 +167,7 @@ section{ padding-block:var(--gap); border-top:1px solid var(--rule); }
 .facts dd{ margin:.35rem 0 0; font-size:.95rem; }
 
 /* --- Research themes --- */
-.themes{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+.themes{ display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
 .theme{
   background:var(--glass);
   border:1px solid var(--rule);
@@ -184,6 +184,12 @@ section{ padding-block:var(--gap); border-top:1px solid var(--rule); }
 .projects li{ padding:1.1rem 0; border-top:1px solid var(--rule); }
 .projects h3{ font-family:var(--body); font-size:1rem; font-weight:600; margin:.35rem 0 .3rem; }
 .projects p{ margin:0; font-size:.9rem; color:var(--mesh); }
+
+/* --- Press --- */
+.press{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(2,1fr); gap:0 3rem; }
+.press li{ padding:1rem 0; border-top:1px solid var(--rule); }
+.press .mono{ display:block; margin-bottom:.35rem; }
+.press a{ font-size:.96rem; line-height:1.5; }
 
 /* --- News --- */
 .news{ list-style:none; margin:0; padding:0; max-width:var(--measure); }
@@ -231,6 +237,7 @@ footer p{ margin:0; }
   .about-grid{ grid-template-columns:1fr; }
   .themes{ grid-template-columns:1fr; }
   .projects{ grid-template-columns:1fr; gap:0; }
+  .press{ grid-template-columns:1fr; gap:0; }
   .contact-grid{ grid-template-columns:1fr; }
 }
 @media (max-width:560px){
@@ -256,6 +263,7 @@ footer p{ margin:0; }
       <a href="#projects">Projects</a>
       <a href="#news">News</a>
       <a href="#publications">Publications</a>
+      <a href="#press">Press</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -312,11 +320,11 @@ footer p{ margin:0; }
 
     <div class="about-grid">
       <div class="prose">
-        <p>I lead thin-film photovoltaics R&amp;D at imec / EnergyVille, where my work sits in the gap between a champion perovskite cell on a square centimetre and a module that holds its efficiency in the field. Most of what limits perovskite commercialisation appears only at scale, so my group works on a module-scaling methodology that connects nanoscale material properties to large-area device performance — validated from roughly 1 cm² to 900 cm².</p>
+        <p>I lead thin-film photovoltaics R&amp;D at imec / EnergyVille, where my work sits in the gap between a champion perovskite cell on a square centimetre and a module that holds its efficiency in the field. Most of what limits perovskite commercialisation appears only at scale, so as technical and scientific lead I drive a module-scaling methodology that connects nanoscale material properties to large-area device performance — validated from roughly 1 cm² to 900 cm².</p>
 
         <p>The second half of that argument is evidence. I led the first multi-site outdoor monitoring study of perovskite modules, running over two years across three countries, and used it to build machine-learning lifetime forecasts. Bankability is a data problem before it is a technology problem, and utilities and insurers need degradation numbers with the measurement conditions attached.</p>
 
-        <p>I completed my Ph.D. at Nanyang Technological University in Singapore on molecular hole-transport materials, then started a perovskite programme from scratch as a postdoctoral fellow at CNRS in France. A Marie Skłodowska-Curie Fellowship at EPFL (<a class="link" href="https://cordis.europa.eu/project/id/843453">STARS</a>, 2019–2021) with Prof. Michael Grätzel produced the nanoscale interface engineering that underpins the scaling work. I have been at imec since 2022, where my work spans the research and its valorisation toward industrial deployment.</p>
+        <p>I trained as an engineer at Delhi College of Engineering, University of Delhi (B.Eng. in Polymer Science &amp; Chemical Technology, first class), completing my bachelor&rsquo;s thesis research on conducting-polymer nanostructures during an internship at the University of Auckland, New Zealand. I went on to a Ph.D. at Nanyang Technological University in Singapore on molecular hole-transport materials, then started a perovskite programme from scratch as a postdoctoral fellow at CNRS in France. A Marie Skłodowska-Curie Fellowship at EPFL (<a class="link" href="https://cordis.europa.eu/project/id/843453">STARS</a>, 2019–2021) with Prof. Michael Grätzel produced the nanoscale interface engineering that underpins the scaling work. I have been at imec since 2022, where my work spans the research and its valorisation toward industrial deployment.</p>
       </div>
 
       <dl class="facts">
@@ -326,11 +334,11 @@ footer p{ margin:0; }
         </div>
         <div>
           <dt>Supervision</dt>
-          <dd>Three MSCA postdoctoral fellows, two Ph.D. students, two postdocs, engineers</dd>
+          <dd>Three MSCA postdoctoral fellows, two Ph.D. students, two postdocs, and MSc interns</dd>
         </div>
         <div>
           <dt>Editorial &amp; service</dt>
-          <dd>Academic Editor, <em>Scientific Reports</em> · FWO Review College, 2023–2025</dd>
+          <dd>Academic Editor, <em>Scientific Reports</em> · ETIP PV Working Group · FWO Review College</dd>
         </div>
         <div>
           <dt>Open to</dt>
@@ -348,10 +356,22 @@ footer p{ margin:0; }
   <div class="wrap">
     <div class="section-head">
       <p class="mono">02 — Research</p>
-      <h2>Three threads</h2>
+      <h2>From molecule to field</h2>
     </div>
 
     <div class="themes">
+      <article class="theme">
+        <p class="mono">Materials</p>
+        <h3>The stack, layer by layer</h3>
+        <p>Light absorbers across bandgaps — from 2D/3D mixed-dimensional to wide-gap compositions — with molecular passivators, charge-transport layers, self-assembled monolayers, and electrodes designed as a system.</p>
+      </article>
+
+      <article class="theme">
+        <p class="mono">Interfaces</p>
+        <h3>Stability by design</h3>
+        <p>Nanoscale interface and defect engineering that decouples the mechanisms driving light-, heat- and bias-induced degradation in metal-halide perovskites.</p>
+      </article>
+
       <article class="theme">
         <p class="mono">Scale-up</p>
         <h3>From cells to modules</h3>
@@ -362,12 +382,6 @@ footer p{ margin:0; }
         <p class="mono">Reliability</p>
         <h3>Evidence from outdoors</h3>
         <p>Multi-site outdoor monitoring over two years and three countries, with machine-learning lifetime forecasting — the degradation data the industry needs for bankability.</p>
-      </article>
-
-      <article class="theme">
-        <p class="mono">Interfaces</p>
-        <h3>Stability by design</h3>
-        <p>Nanoscale interface and defect engineering that decouples the mechanisms driving light-, heat- and bias-induced degradation in metal-halide perovskites.</p>
       </article>
     </div>
   </div>
@@ -388,7 +402,7 @@ footer p{ margin:0; }
       <li>
         <p class="mono">EIC Transition · 2026–2029</p>
         <h3>TRANSPIRE</h3>
-        <p>Coordinator. The valorisation track for imec’s perovskite technology: bifacial perovskite and perovskite–silicon tandem modules, from TRL&nbsp;4 to pilot-line readiness.
+        <p>Coordinator and principal investigator. The valorisation track for imec’s perovskite technology: bifacial perovskite and perovskite–silicon tandem modules, from TRL&nbsp;4 to pilot-line readiness.
           <a class="link" href="https://www.transpire-project.eu/">Project site</a> ·
           <a class="link" href="https://cordis.europa.eu/project/id/101291137">CORDIS</a>
         </p>
@@ -402,17 +416,17 @@ footer p{ margin:0; }
         </p>
       </li>
       <li>
-        <p class="mono">Horizon Europe Twinning · to 2026</p>
+        <p class="mono">Horizon Europe Twinning · 2023–2026</p>
         <h3>TESTARE</h3>
-        <p>Partner. Twinning for excellence in testing new-generation PV — long-term stability and field reliability, with the University of Cyprus, Fraunhofer ISE and BGU.
+        <p>Partner and principal investigator. Twinning for excellence in testing new-generation PV — long-term stability and field reliability, with the University of Cyprus, Fraunhofer ISE and BGU.
           <a class="link" href="https://www.testare.eu/">Project site</a> ·
           <a class="link" href="https://cordis.europa.eu/project/id/101079488">CORDIS</a>
         </p>
       </li>
       <li>
-        <p class="mono">Horizon Europe</p>
+        <p class="mono">Horizon Europe · 2023–2026</p>
         <h3>APPROACH</h3>
-        <p>Partner. Advanced photonic processes for solar energy harvesting — training and intersectoral mobility for research and innovation talents.
+        <p>Partner and principal investigator at imec. Advanced photonic processes for solar energy harvesting — training and intersectoral mobility for research and innovation talents.
           <a class="link" href="https://euproject-approach.eu/">Project site</a> ·
           <a class="link" href="https://cordis.europa.eu/project/id/101120397">CORDIS</a>
         </p>
@@ -454,12 +468,12 @@ footer p{ margin:0; }
         <p>Triple-junction solar cell work with Trina Solar and Fudan University published in <em>Nature</em>.</p>
       </li>
       <li>
-        <time datetime="2026-01">2026</time>
-        <p>Perspective article "Taking Perovskite Photovoltaics From Promise to Product" accepted in <em>Nature Reviews Clean Technology</em>.</p>
+        <time datetime="2026-05">May 2026</time>
+        <p>Perspective "Taking Perovskite Photovoltaics From Promise to Product" published in <em>Nature Reviews Clean Technology</em>.</p>
       </li>
       <li>
         <time datetime="2026-01">2026</time>
-        <p>Two MSCA Postdoctoral Fellowships — ARMOR and SHINE — awarded to fellows joining the group.</p>
+        <p>Two MSCA Postdoctoral Fellowships — ARMOR and SHINE — awarded to fellows joining imec under my supervision.</p>
       </li>
       <li>
         <time datetime="2026-05">May 2026</time>
@@ -505,9 +519,39 @@ footer p{ margin:0; }
       </li>
       <li>
         <p class="pub-title">Taking perovskite photovoltaics from promise to product</p>
-        <!-- TODO: add the full author list and DOI once the article is published online -->
-        <p class="pub-authors"><span class="me">A. Krishna</span> and co-authors</p>
-        <p class="pub-meta"><em>Nature Reviews Clean Technology</em>, accepted (2026)</p>
+        <p class="pub-authors">A. K. Harit, Z.-F. He, Y. Kuang, T. Merckx, A. Aguirre, M. Li, K. Xiao, X. Wang, Y. Hou, B. Yan, H. Tan, T. Aernouts, <span class="me">A. Krishna</span></p>
+        <p class="pub-meta"><em>Nature Reviews Clean Technology</em> <strong>2</strong>, 453&ndash;466 (2026) · Perspective</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1038/s44359-026-00173-2">DOI</a>
+        </div>
+      </li>
+    </ul>
+
+    <p class="year">2025</p>
+    <ul class="pubs">
+      <li>
+        <p class="pub-title">Supramolecular engineering in hybrid perovskite optoelectronics</p>
+        <p class="pub-authors">T.-S. Su, <span class="me">A. Krishna</span>, C. Zhao, J. Chu, H. Zhang</p>
+        <p class="pub-meta"><em>Chemical Society Reviews</em> <strong>54</strong>, 6448&ndash;6481 (2025)</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1039/d4cs00924j">DOI</a>
+        </div>
+      </li>
+      <li>
+        <p class="pub-title">In-depth study of degradation in scalable wide bandgap perovskite cells</p>
+        <p class="pub-authors">J. Parion, B. Jacquet, D. Ali, R. Pusapati, A. K. Harit, A. Rizzo, Y. Kuang, F. Duerinckx, H. S. Radhakrishnan, T. Aernouts, <span class="me">A. Krishna</span>, J. Poortmans, J. Lauwaert, B. Vermang</p>
+        <p class="pub-meta"><em>Materials Futures</em> <strong>4</strong>, 045101 (2025)</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1088/2752-5724/ae01c1">DOI</a>
+        </div>
+      </li>
+      <li>
+        <p class="pub-title">Modeling the FA and I losses in mixed-halide perovskite through chemical rate equations: insights into light-induced degradation</p>
+        <p class="pub-authors">J. Hieulle, <span class="me">A. Krishna</span>, H. A. Musallam, T. Aernouts, A. Redinger</p>
+        <p class="pub-meta"><em>EES Solar</em> <strong>1</strong>, 645&ndash;658 (2025)</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1039/d5el00058k">DOI</a>
+        </div>
       </li>
     </ul>
 
@@ -585,12 +629,67 @@ footer p{ margin:0; }
 </section>
 
 <!-- ==========================================================
+     PRESS — links carried over verbatim from the CV
+     ========================================================== -->
+<section id="press">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="mono">06 — In the press</p>
+      <h2>Media highlights</h2>
+    </div>
+
+    <ul class="press">
+      <li>
+        <span class="mono">PV Magazine · Jan 2025</span>
+        <a class="link" href="https://www.pv-magazine.com/2025/01/10/field-testing-shows-perovskite-solar-modules-can-retain-78-of-their-initial-efficiency-after-one-year/">Field testing shows perovskite modules retain 78% of initial efficiency after one year</a>
+      </li>
+      <li>
+        <span class="mono">De Tijd · 2025 · in Dutch</span>
+        <a class="link" href="https://www.tijd.be/ondernemen/milieu-energie/limburgs-labo-sleutelt-aan-superzonnepanelen-die-tot-de-helft-meer-stroom-opwekken/10586844.html">Belgian feature on imec&rsquo;s &ldquo;super solar panels&rdquo; boosting power output</a>
+      </li>
+      <li>
+        <span class="mono">TechXplore · 2025</span>
+        <a class="link" href="https://techxplore.com/news/2025-04-perovskite-solar-modules-year-outdoor.html">Perovskite solar modules prove their stability after a year outdoors</a>
+      </li>
+      <li>
+        <span class="mono">Yahoo Tech · 2025</span>
+        <a class="link" href="https://tech.yahoo.com/science/articles/scientists-major-breakthrough-while-testing-113002323.html">Global coverage of imec&rsquo;s advances in perovskite PV reliability</a>
+      </li>
+      <li>
+        <span class="mono">eeNews Europe · 2025</span>
+        <a class="link" href="https://www.eenewseurope.com/en/imec-shows-long-term-stability-of-outdoor-perovskite-solar-modules/">imec shows long-term stability of outdoor perovskite solar modules</a>
+      </li>
+      <li>
+        <span class="mono">PV Magazine · 2024</span>
+        <a class="link" href="https://www.pv-magazine.com/press-releases/successful-conclusion-of-the-become-pv-workshop-on-commercializing-emerging-pv-technologies/">Successful conclusion of the BECOME PV workshop on commercialising emerging PV</a>
+      </li>
+      <li>
+        <span class="mono">PV Magazine · 2023</span>
+        <a class="link" href="https://www.pv-magazine.com/2023/04/04/imec-develops-781-cm2-bifacial-perovskite-solar-panel-with-11-9-efficiency/">imec develops 781 cm&sup2; bifacial perovskite solar panel</a>
+      </li>
+      <li>
+        <span class="mono">PV Magazine · 2023</span>
+        <a class="link" href="https://www.pv-magazine.com/2023/07/21/imec-presents-inverted-perovskite-solar-cell-with-24-3-efficiency/">imec presents inverted perovskite solar cell with 24.3% efficiency</a>
+      </li>
+      <li>
+        <span class="mono">R&amp;D World · 2023</span>
+        <a class="link" href="https://www.rdworldonline.com/imec-has-made-progress-in-developing-perovskite-solar-modules/">imec&rsquo;s progress in developing scalable perovskite solar modules</a>
+      </li>
+      <li>
+        <span class="mono">PV Magazine · 2021</span>
+        <a class="link" href="https://www.pv-magazine.com/2021/09/24/interface-engineering-for-a-stable-23-4-efficient-perovskite-solar-cell/">Interface engineering for a stable 23.4%-efficient perovskite solar cell</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==========================================================
      CONTACT
      ========================================================== -->
 <section id="contact">
   <div class="wrap">
     <div class="section-head">
-      <p class="mono">06 — Contact</p>
+      <p class="mono">07 — Contact</p>
       <h2>Get in touch</h2>
     </div>
 
